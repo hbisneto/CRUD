@@ -35,7 +35,8 @@
     <div class="container">
       <?php if(isset($_SESSION['msg'])): ?>
       <div class="<?=$_SESSION['alert'];?>">
-        <?= $_SESSION['msg']; ?>
+        <?= $_SESSION['msg'];
+        unset($_SESSION['msg']); ?>
       </div>
       <?php endif; ?>
       <table class="table">
