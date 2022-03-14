@@ -13,7 +13,7 @@ if(isset($_POST['save']))
 		if($stmt->execute())
 		{
 			# Alert Message
-			$_SESSION['msg'] = "New game is successfully inserted.";
+			$_SESSION['msg'] = "Novo jogo inserido com sucesso.";
 			$_SESSION['alert'] = "alert alert-success";
 		}
 		$stmt->close();
@@ -22,7 +22,7 @@ if(isset($_POST['save']))
 	else
 	{
 		# Alert Message
-		$_SESSION['msg'] = "Game name and Status should not be empty.";
+		$_SESSION['msg'] = "Nome do game e Status não deveriam estar vazios.";
 		$_SESSION['alert'] = "alert alert-warning";
 	}
 	header("location: index.php");
@@ -36,7 +36,7 @@ if(isset($_POST['delete']))
 	$stmt->bind_param('i', $id);
 	if($stmt->execute())
 	{
-		$_SESSION['msg'] = "Selected game is successfully deleted.";
+		$_SESSION['msg'] = "O game selecionado foi excluido com sucesso.";
 		$_SESSION['alert'] = "alert alert-danger";
 	}
 	$stmt->close();
@@ -56,7 +56,7 @@ if(isset($_POST['edit']))
 		$stmt->bind_param('ssi', $gamename, $status, $id);
 		if($stmt->execute())
 		{
-			$_SESSION['msg'] = "Selected record is successfully updated.";
+			$_SESSION['msg'] = "As informações sobre o jogo foram atualizadas com sucesso.";
 			$_SESSION['alert'] = "alert alert-success";
 		}
 		$stmt->close();
@@ -64,7 +64,7 @@ if(isset($_POST['edit']))
 	}
 	else
 	{
-		$_SESSION['msg'] = "Game name and Status should not be empty.";
+		$_SESSION['msg'] = "Nome do game e Status não deveriam estar vazios.";
 		$_SESSION['alert'] = "alert alert-warning";
 	}
 	header("location: index.php");

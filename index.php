@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Já Zerei</title>
+    <title>Game DB</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -42,10 +42,10 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Id</th>
+            <th>ID</th>
             <th>Game</th>
             <th>Status</th>
-            <th>Action</th>
+            <th>Ação</th>
           </tr>
         </thead>
         <tbody>
@@ -59,9 +59,9 @@
               <td><?= $row['id']; ?></td>
               <td><?= $row['gamename']; ?></td>
               <td><?= $row['status']; ?></td>
-              <td style="width: 15%">
-                <button type="submit" name="delete" value="<?= $row['id']; ?>" class="btn btn-danger">Delete</button>
-                <button type="button" name="edit" value="<?= $x; $x++; ?>" class="btn btn-outline-info">Edit</button>
+              <td style="width: 20%">
+                <button type="submit" name="delete" value="<?= $row['id']; ?>" class="btn btn-danger">Deletar</button>
+                <button type="button" name="edit" value="<?= $x; $x++; ?>" class="btn btn-outline-info">Editar</button>
               </td>
             </tr>
             <?php endwhile; ?>
